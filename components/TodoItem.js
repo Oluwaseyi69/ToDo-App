@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import styles from './Styles';
+import CustomButton from './CustomButton';
 
 
 const TodoItem = ({ todo, onEdit, onToggleDone, onDelete }) => {
@@ -13,7 +13,7 @@ const TodoItem = ({ todo, onEdit, onToggleDone, onDelete }) => {
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <Button title="Edit" onPress={onEdit} />
         <Button title={todo.done ? 'Undone' : 'Done'} onPress={onToggleDone} />
-        <Button title="Delete" onPress={onDelete} style={styles.deleteButton} />
+        <CustomButton title="Delete" onPress={onDelete} />
       </View>
     </View>
   );
